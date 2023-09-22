@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>Cyfred Go-IT-Markup Homework 5</title>
-    <meta name="description" content="Cyfred Go-IT-Markup Homework 5">
+    <meta name="description" content="Cyfred Go-IT-Markup Homework 6">
     <meta charset="utf-8">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -374,8 +374,26 @@
                           </svg>
                       </a>
                   </li>
+
               </ul>
           </div>
+          <div class="footer-subscribe">
+            <p class="subscriber-text"> Subscribe </p>
+                <form class="subscriber-form">
+                    <div class="subscriber-field">
+                        <label class="footer-form-field">
+                            <input class="footer-form-input" type="email" name="user-email" placeholder="E-mail" required>
+                        </label>
+                        <button class="button button-subscriber" type="submit">
+                          Subscribe
+                          <svg width="24" height="24" class="subscriber-icon">
+                            <use href="./icon.svg#paper-plane"></use>
+                          </svg>
+                         
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div> 
     </footer>
     <div class="modal is-hidden" data-modal>
@@ -385,6 +403,61 @@
             <use href="./icon.svg#icon-close"></use>
           </svg>
         </button>
+        <h2 class="modal-title">Leave your contacts and we will call you back</h2>
+        
+        <form class="user-contact">
+
+          <label class = "user-contact-field">
+            <span class = "user-contact-label">Name</span>
+            <input type="text" name="full_name">
+            <svg class="user-contact-field-icon">
+              <use href="./icon.svg#icon-name"></use>
+            </svg>
+          </label>
+
+          <label class="user-contact-field">
+            <span class="user-contact-label">Phone</span>
+            <input type="tel" name="user-phone" required />
+            <svg class="user-contact-field-icon">
+              <use href="./icon.svg#icon-phone"></use>
+            </svg>
+          </label>
+
+          <label class="user-contact-field">
+            <span class="user-contact-label">Email</span>
+            <input type="email" name="user-email" required />
+            <svg class="user-contact-field-icon">
+              <use href="./icon.svg#icon-email"></use>
+            </svg>
+          </label>
+           
+          <label class="user-contact-field user-contact-comment">
+            <span class="user-contact-label">Comments</span>
+            <textarea
+              class="user-contact-textarea"
+              name="user-feedback"
+              rows="8"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+
+          <label class="user-contact-field user-contact-checkbox">
+            <input
+              class="user-contact-input-checkbox"
+              type="checkbox"
+              name="user-terms"
+            />
+            <svg class="user-contact-field-checkmark">
+              <use href="./icon.svg#icon-checkbox"></use>
+            </svg>
+            <span
+              >I accept the terms and conditions of the
+              <a class="form-terms" href="">Privacy Policy</a>
+            </span>
+          </label>
+
+          <button class="user-contact-submit" type="submit">Send</button>
+        </form>
       </div>
     </div>
     
