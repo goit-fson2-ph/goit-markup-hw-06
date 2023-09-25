@@ -409,7 +409,7 @@
 
           <label class = "user-contact-field">
             <span class = "user-contact-label">Name</span>
-            <input type="text" name="full_name">
+            <input type="text" name="full_name" required>
             <svg class="user-contact-field-icon">
               <use href="./icon.svg#icon-name"></use>
             </svg>
@@ -446,11 +446,12 @@
               class="user-contact-input-checkbox"
               type="checkbox"
               name="user-terms"
+             
             />
-            <svg class="user-contact-field-checkmark">
+            <svg class="user-contact-field-checkmark" width="16" height="16">
               <use href="./icon.svg#icon-checkbox"></use>
             </svg>
-            <span
+            <span class="user-contact-agree-text"
               >I accept the terms and conditions of the
               <a class="form-terms" href="">Privacy Policy</a>
             </span>

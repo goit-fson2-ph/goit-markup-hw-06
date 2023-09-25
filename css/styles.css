@@ -13,7 +13,7 @@
   --light-slate: #8E8F99;
   --cornflower: #E7E9FC;
   --cloud: #F4F4FD;
-  --navy-blue-modal: #2E2F42;
+  --navy-blue-modal: rgba(46, 47, 66, 0.40);
   --grey :#2E2F42;
   --white :#FFFFFF;
   --dairy :#FCFCFC;
@@ -51,6 +51,10 @@ button {
 
 address{
   font-size: normal;
+}
+
+input {
+  font-family: inherit;
 }
 
 .container{
@@ -615,6 +619,7 @@ address{
   transition-property: visibility, opacity;
   transition-duration: var(--transition-duration);
   transform: none;
+  background: var(--navy-blue-modal);
 
 }
 
@@ -631,8 +636,8 @@ address{
 
 .modal-content{
   position: relative;
-  width: 528px;
-  height: 584px;
+  width: 408px;
+  /* height: 584px; */
   padding: 24px;
 
   border-radius: 4px;
@@ -773,7 +778,7 @@ address{
 
 .modal-title{
   margin-top: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 34px;
   text-align: center;
 
   color: var(--navy-blue);
@@ -817,7 +822,12 @@ address{
   border-radius: 4px;
   border: 1px solid rgba(33,33,33,0.2);
   /* var(--navy-blue-modal); */
-
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: 0.48px;
+  color: var(--navy-blue);
   
 }
 
@@ -837,16 +847,21 @@ address{
 {
   border-color: var(--iris);
   outline: 0;
-}
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+  /* stroke: var(--white); */
+
+}
 .user-contact input:focus + svg{
   fill: var(--iris);
+  stroke: var(--white);
 }
 
 
 label.user-contact-checkbox{
   display: flex;
-  padding: 0 12px;
+  /* padding: 0 12px; */
+  color: var(--white);
   margin-top: 16px;
   font-size: 14px;
   line-height: 24px;
@@ -857,7 +872,23 @@ label.user-contact-checkbox{
 
 }
 
+.user-contact-agree-text {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: 0.48px;
+  color: var(--light-slate);
+}
+
+.form-terms{
+  color: var(--iris);
+  text-decoration: underline;
+}
+
 .user-contact-checkbox input{
+  width: 16px;
+  width: 16px;
   appearance: none;
   width: 0;
   height: 0;
@@ -866,19 +897,70 @@ label.user-contact-checkbox{
   border: 0;
 }
 
-.user-contact-checkbox input:checked + svg{
-  border: 0;
-  background-color: var(--ocean);
-  fill: var(--white);
-  /* fill: var(--OCEAN, #404BBF); */
-  /* stroke-width: 1px; */
-  /* stroke: var(--OCEAN, #404BBF); */
-}
 
 
 .user-contact-range input{
   width: 100%;
 }
+
+
+.user-contact-field-icon{
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 12px;
+  top: 40%;
+  transform: translateY(-50%);
+
+}
+
+.user-contact-field-checkmark{
+  
+  width: 16px;
+  height: 15px;
+  border: 1px solid var(--navy-blue-modal);;
+  stroke-width: 1px;
+
+  background-color: var(--white);
+  stroke: var(--white);
+  fill: var(--white);
+  border-radius: 2px;
+  margin-right: 8px;
+  /* margin-top: 4px; */
+}
+
+.user-contact-input-checkbox:checked + .user-contact-field-checkmark{
+  /* background-color: var(--ocean);
+  border-color: var(--ocean); 
+  fill: var(--white);  */
+}
+
+.user-contact-checkbox input:checked + svg {
+  border: 0;
+  background-color: var(--ocean);
+  border-color: var(--ocean);
+
+  fill: var(--white);
+  stroke: var(--white);
+
+  /* appearance: none; */
+
+}
+
+/* 
+.visually-hidden{
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+ 
+  border: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+} */
 
 .user-contact-submit{
   display: flex;
@@ -899,30 +981,6 @@ label.user-contact-checkbox{
   border-radius: 4px;
   background: var(--iris);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-}
-
-.user-contact-field-icon{
-  width: 18px;
-  height: 18px;
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-
-  /* fill: var(--primary-black-color); */
-  /* transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); */
-}
-
-.user-contact-field-checkmark{
-  
-  width: 16px;
-  height: 15px;
-  border: 1px solid var(--navy-blue-modal);;
-  stroke-width: 1px;
-  stroke: var(--navy-blue-modal);
-  border-radius: 2px;
-  margin-right: 8px;
-  margin-top: 4px;
 }
 
 
