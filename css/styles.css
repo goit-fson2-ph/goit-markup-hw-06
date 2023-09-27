@@ -190,6 +190,9 @@ input {
   letter-spacing: 0.64px;
 }
 
+
+.user-contact-submit:hover,
+.user-contact-submit:focus,
 .section-hero-button:hover,
 .section-hero-button:focus {
   background-color: var(--ocean);
@@ -662,9 +665,10 @@ input {
   border: 1px solid rgb(142, 143, 153, 0.5);
 
   cursor: pointer;
+  
   transition: color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1),
   border-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1),
-  color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  fill var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon{
@@ -672,6 +676,8 @@ input {
   width: 8px;
   height: 8px;
   transform: stroke var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+
+  
 }
 
 .modal-close:hover,
@@ -682,6 +688,11 @@ input {
   stroke-width: 1px;
   border-color: transparent;
   fill: var(--white);
+
+  transition: background-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1),
+  border-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1),
+  fill var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Subscribe Form*/
@@ -735,18 +746,21 @@ input {
 .footer-form-input:focus {
   outline: none;
   border-color: var(--iris);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .button-subscriber {
 
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
 
   color: var(--WHITE, #FFF);
   text-align: center;
-
-  /* align-items: center; */
-  /* justify-content: center; */
+  gap: 16px;
   padding: 8px 24px;
-  /* gap: 16px; */
+
   width: 165px;
   font-size: 16px;
   font-weight: 500;
@@ -763,19 +777,18 @@ input {
 .subscriber-icon {
   width: 24px;
   height: 24px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-subscribe:hover,
 .button-subscribe:focus {
   background-color: var(--ocean);
+  transition: background-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-subscribe:active {
   background-color: var(--ocean);
 }
 
-
 /* Modal Form */
-
 .modal-title{
   margin-top: 24px;
   margin-bottom: 34px;
@@ -787,7 +800,7 @@ input {
   font-weight: 500;
   line-height: 1.5em; /* 150% */
   letter-spacing: 0.32px;
-  
+
 }
 
 .user-contact {
@@ -843,20 +856,27 @@ input {
 }
 
 .user-contact input:focus,
-.user-contact textarea:focus 
+.user-contact textarea:focus,
+.user-contact input:hover,
+.user-contact textarea:hover  
 {
   border-color: var(--iris);
   outline: 0;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 
   /* stroke: var(--white); */
 
 }
-.user-contact input:focus + svg{
+
+/* .user-contact input:focus + svg,
+.user-contact input:hover + svg */
+.user-contact-input:focus + .user-contact-field-icon, 
+.user-contact-input:hover + .user-contact-field-icon
+{
   fill: var(--iris);
   stroke: var(--white);
+  transition: fill var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 label.user-contact-checkbox{
   display: flex;
@@ -929,12 +949,6 @@ label.user-contact-checkbox{
   /* margin-top: 4px; */
 }
 
-.user-contact-input-checkbox:checked + .user-contact-field-checkmark{
-  /* background-color: var(--ocean);
-  border-color: var(--ocean); 
-  fill: var(--white);  */
-}
-
 .user-contact-checkbox input:checked + svg {
   border: 0;
   background-color: var(--ocean);
@@ -943,24 +957,11 @@ label.user-contact-checkbox{
   fill: var(--white);
   stroke: var(--white);
 
+  
+
   /* appearance: none; */
 
 }
-
-/* 
-.visually-hidden{
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 0;
-  width: 16px;
-  height: 16px;
- 
-  border: 0;
-  padding: 0;
-  opacity: 0;
-  overflow: hidden;
-} */
 
 .user-contact-submit{
   display: flex;
