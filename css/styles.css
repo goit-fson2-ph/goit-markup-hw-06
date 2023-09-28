@@ -190,12 +190,15 @@ input {
   letter-spacing: 0.64px;
 }
 
-
+.button-subscriber:hover,
+.button-subscriber:focus,
 .user-contact-submit:hover,
 .user-contact-submit:focus,
 .section-hero-button:hover,
 .section-hero-button:focus {
   background-color: var(--ocean);
+  transition: background-color var(--transition-duration) 
+          cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feature{
@@ -675,6 +678,7 @@ input {
   stroke: rgba(0, 0, 0, 0.10);
   width: 8px;
   height: 8px;
+
   transform: stroke var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 
   
