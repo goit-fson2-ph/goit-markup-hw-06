@@ -714,6 +714,7 @@ input {
   line-height: 1.5em;
   letter-spacing: 0.32px;
   color: var(--white);
+  margin-bottom: 16px;
 }
 .subscriber-text
 .subscriber-field {
@@ -950,7 +951,7 @@ label.user-contact-checkbox{
   fill: var(--white);
   border-radius: 2px;
   margin-right: 8px;
-  /* margin-top: 4px; */
+
 }
 
 .user-contact-checkbox input:checked + svg {
@@ -960,10 +961,6 @@ label.user-contact-checkbox{
 
   fill: var(--white);
   stroke: var(--white);
-
-  
-
-  /* appearance: none; */
 
 }
 
